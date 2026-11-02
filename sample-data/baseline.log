@@ -1,0 +1,33 @@
+[2026-10-15T08:00:01Z] [BOOT] U-Boot 2022.04-rc1 (Oct 10 2026 - 14:22:10 +0200) - Board: VSPM350-GW
+[2026-10-15T08:00:03Z] [BOOT] NAND: 128 MiB, DDR3: 256 MiB detected at 1066 MHz
+[2026-10-15T08:00:12Z] [KERNEL] Linux version 5.10.138 (builder@ci-worker-04) (gcc version 11.2.0) #1 SMP PREEMPT
+[2026-10-15T08:00:15Z] [KERNEL] mtd: 6 partitions found on MTD device spi0.0
+[2026-10-15T08:00:18Z] [KERNEL] netif: eth0 Link up, 1000Mbps, Full Duplex
+[2026-10-15T08:00:24Z] [SYSTEM] procd: - init complete - [boot_duration_sec: 24.2]
+[2026-10-15T08:00:25Z] [TEST_START] suite: network_sanity, test: eth_link_negotiation
+[2026-10-15T08:00:26Z] [TEST_PASS] suite: network_sanity, test: eth_link_negotiation [duration_ms: 1200]
+[2026-10-15T08:00:27Z] [TEST_START] suite: network_sanity, test: pppoe_session_init
+[2026-10-15T08:00:30Z] [DAEMON] pppd[1042]: Remote message: PAP authentication succeeded
+[2026-10-15T08:00:31Z] [DAEMON] pppd[1042]: local  IP address 10.42.0.18
+[2026-10-15T08:00:31Z] [TEST_PASS] suite: network_sanity, test: pppoe_session_init [duration_ms: 4100]
+[2026-10-15T08:00:32Z] [TEST_START] suite: network_sanity, test: dhcp_client_binding
+[2026-10-15T08:00:34Z] [DAEMON] dnsmasq-dhcp[1120]: DHCPACK(br-lan) 192.168.1.154 50:eb:f6:12:34:56 test-client-01
+[2026-10-15T08:00:35Z] [TEST_PASS] suite: network_sanity, test: dhcp_client_binding [duration_ms: 2800]
+[2026-10-15T08:00:36Z] [TEST_START] suite: wireless, test: wifi_2g_ap_beacon
+[2026-10-15T08:00:38Z] [DAEMON] hostapd[1204]: wlan0: AP-ENABLED
+[2026-10-15T08:00:39Z] [TEST_PASS] suite: wireless, test: wifi_2g_ap_beacon [duration_ms: 3100]
+[2026-10-15T08:00:40Z] [TEST_START] suite: wireless, test: wifi_5g_dfs_cac
+[2026-10-15T08:00:44Z] [DAEMON] hostapd[1204]: wlan1: DFS-CAC-COMPLETED channel=100
+[2026-10-15T08:00:45Z] [TEST_PASS] suite: wireless, test: wifi_5g_dfs_cac [duration_ms: 5200]
+[2026-10-15T08:00:46Z] [TEST_START] suite: management, test: tr069_inform_handshake
+[2026-10-15T08:00:48Z] [DAEMON] cwmp[1310]: Inform (1 BOOT) sent to ACS https://acs.local:7547
+[2026-10-15T08:00:49Z] [DAEMON] cwmp[1310]: Received 200 OK with InformResponse
+[2026-10-15T08:00:49Z] [TEST_PASS] suite: management, test: tr069_inform_handshake [duration_ms: 3300]
+[2026-10-15T08:00:50Z] [TEST_START] suite: management, test: omci_voice_wan_provision
+[2026-10-15T08:00:53Z] [DAEMON] omcid[1405]: OMCI ME 98 (Voice Service Profile) instantiated successfully
+[2026-10-15T08:00:54Z] [DAEMON] omcid[1405]: WAN instances count: 2, Active MEs synced: 2
+[2026-10-15T08:00:54Z] [TEST_PASS] suite: management, test: omci_voice_wan_provision [duration_ms: 4200]
+[2026-10-15T08:00:55Z] [SYSTEM] memory_snapshot: [service: omcid, VmRSS_kB: 8120, VmHWM_kB: 9240]
+[2026-10-15T08:00:56Z] [SYSTEM] memory_snapshot: [service: hostapd, VmRSS_kB: 4210, VmHWM_kB: 4980]
+[2026-10-15T08:00:57Z] [SYSTEM] memory_snapshot: [service: cwmp, VmRSS_kB: 6350, VmHWM_kB: 7120]
+[2026-10-15T08:00:58Z] [SUITE_SUMMARY] total: 7, passed: 7, failed: 0, skipped: 0

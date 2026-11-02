@@ -1,0 +1,33 @@
+[2026-10-18T10:14:01Z] [BOOT] U-Boot 2022.04-rc1 (Oct 18 2026 - 09:45:00 +0200) - Board: VSPM350-GW
+[2026-10-18T10:14:04Z] [BOOT] NAND: 128 MiB, DDR3: 256 MiB detected at 1066 MHz
+[2026-10-18T10:14:15Z] [KERNEL] Linux version 5.10.138 (builder@ci-worker-02) (gcc version 11.2.0) #48 SMP PREEMPT
+[2026-10-18T10:14:19Z] [KERNEL] mtd: 6 partitions found on MTD device spi0.0
+[2026-10-18T10:14:23Z] [KERNEL] netif: eth0 Link up, 1000Mbps, Full Duplex
+[2026-10-18T10:14:36Z] [SYSTEM] procd: - init complete - [boot_duration_sec: 35.8]
+[2026-10-18T10:14:37Z] [TEST_START] suite: network_sanity, test: eth_link_negotiation
+[2026-10-18T10:14:38Z] [TEST_PASS] suite: network_sanity, test: eth_link_negotiation [duration_ms: 1180]
+[2026-10-18T10:14:39Z] [TEST_START] suite: network_sanity, test: pppoe_session_init
+[2026-10-18T10:14:42Z] [DAEMON] pppd[1055]: Remote message: PAP authentication succeeded
+[2026-10-18T10:14:43Z] [DAEMON] pppd[1055]: local  IP address 10.42.0.22
+[2026-10-18T10:14:43Z] [TEST_PASS] suite: network_sanity, test: pppoe_session_init [duration_ms: 4050]
+[2026-10-18T10:14:44Z] [TEST_START] suite: wireless, test: wifi_2g_ap_beacon
+[2026-10-18T10:14:46Z] [DAEMON] hostapd[1210]: wlan0: AP-ENABLED
+[2026-10-18T10:14:47Z] [TEST_PASS] suite: wireless, test: wifi_2g_ap_beacon [duration_ms: 3050]
+[2026-10-18T10:14:48Z] [TEST_START] suite: wireless, test: wifi_5g_dfs_cac
+[2026-10-18T10:14:52Z] [ERROR] hostapd[1210]: wlan1: Failed to allocate memory for DFS radar history buffer (ENOMEM)
+[2026-10-18T10:14:55Z] [ERROR] hostapd[1210]: wlan1: Interface initialization timed out during CAC state
+[2026-10-18T10:14:56Z] [TEST_FAIL] suite: wireless, test: wifi_5g_dfs_cac [duration_ms: 8100, reason: "CAC state timed out / driver alloc failure"]
+[2026-10-18T10:14:57Z] [TEST_START] suite: management, test: tr069_inform_handshake
+[2026-10-18T10:15:00Z] [WARN] cwmp[1322]: Connection timeout to ACS primary endpoint, attempting fallback
+[2026-10-18T10:15:02Z] [DAEMON] cwmp[1322]: Received 200 OK with InformResponse from secondary endpoint
+[2026-10-18T10:15:02Z] [TEST_PASS] suite: management, test: tr069_inform_handshake [duration_ms: 5400]
+[2026-10-18T10:15:03Z] [TEST_START] suite: management, test: omci_voice_wan_provision
+[2026-10-18T10:15:05Z] [DAEMON] omcid[1415]: Processing OMCI ME 98 (Voice Service Profile) request
+[2026-10-18T10:15:06Z] [ERROR] omcid[1415]: Inconsistent WAN entry count: table reports 3 entries, active MEs count is 1
+[2026-10-18T10:15:06Z] [KERNEL] do_page_fault(): sending SIGSEGV to omcid for invalid read access from 00000014
+[2026-10-18T10:15:06Z] [KERNEL] epc = 77b42ef0 in libomci_proto.so[77b38000+1b000]
+[2026-10-18T10:15:07Z] [TEST_FAIL] suite: management, test: omci_voice_wan_provision [duration_ms: 3800, reason: "Daemon crashed with SIGSEGV (libomci_proto.so)"]
+[2026-10-18T10:15:08Z] [SYSTEM] memory_snapshot: [service: omcid, VmRSS_kB: 16420, VmHWM_kB: 18100]
+[2026-10-18T10:15:09Z] [SYSTEM] memory_snapshot: [service: hostapd, VmRSS_kB: 7350, VmHWM_kB: 8120]
+[2026-10-18T10:15:10Z] [SYSTEM] memory_snapshot: [service: cwmp, VmRSS_kB: 6410, VmHWM_kB: 7180]
+[2026-10-18T10:15:11Z] [SUITE_SUMMARY] total: 6, passed: 4, failed: 2, skipped: 0

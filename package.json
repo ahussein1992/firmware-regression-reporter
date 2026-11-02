@@ -1,0 +1,31 @@
+{
+  "name": "firmware-regression-reporter",
+  "version": "1.0.0",
+  "description": "Automated firmware test log comparison, evidence-linked regression detection, and AI-assisted triage reporting for embedded Linux and networking devices.",
+  "main": "src/cli.js",
+  "type": "module",
+  "bin": {
+    "firmware-regression-reporter": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test tests/reporter.test.js",
+    "report": "node src/cli.js --baseline sample-data/baseline.log --candidate sample-data/candidate.log --output examples/sample-regression-report.md",
+    "report:ai": "node src/cli.js --baseline sample-data/baseline.log --candidate sample-data/candidate.log --output examples/sample-regression-report.md --ai"
+  },
+  "keywords": [
+    "embedded-linux",
+    "openwrt",
+    "firmware",
+    "regression-testing",
+    "test-reporting",
+    "log-analysis",
+    "triage",
+    "automation",
+    "ai-agent"
+  ],
+  "author": "Ahmed Hussein",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
