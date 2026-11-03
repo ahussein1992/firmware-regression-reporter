@@ -121,4 +121,5 @@ I offer **fixed-scope integration pilots** for embedded Linux, IoT, and networki
 **Contact & Inquiries:**
 - **Engineer:** Ahmed Hussein (Senior Embedded Linux & Networking Software Engineer)
 - **GitHub:** [@ahussein1992](https://github.com/ahussein1992)
-- **LinkedIn:** [linkedin.com/in/ahussein1992](https://www.linkedin.com) *(Update with direct URL)*
+- **LinkedIn:** [linkedin.com/in/ahmedhussein1](https://www.linkedin.com/in/ahmedhussein1/)
+- **Email:** [a.husseinfarag@gmail.com](mailto:a.husseinfarag@gmail.com)
